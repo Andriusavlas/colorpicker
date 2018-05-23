@@ -11,6 +11,8 @@ import Orange from './components/colors/Orange';
 import Purple from './components/colors/Purple';
 import Yellow from './components/colors/Yellow';
 import Blue from './components/colors/Blue';
+import Loser from './components/Loser';
+import NotFound from './components/NotFound';
 
 class AppRoutes extends React.Component{
     render(){
@@ -20,6 +22,7 @@ class AppRoutes extends React.Component{
                     <Switch>
                         <Route path='/' component={Home} exact/>
                         <Route path='/colors/:color' component={Home}/>
+                        <Route path='/colors/*' component={NotFound}/>
                         <Route path='/quiz' component={Selector} exact/>
                         <Route path='/quiz/red' component={Red} exact/>
                         <Route path='/quiz/green' component={Green} exact/>
@@ -28,8 +31,11 @@ class AppRoutes extends React.Component{
                         <Route path='/quiz/maroon' component={Maroon} exact/>
                         <Route path='/quiz/purple' component={Purple} exact/>
                         <Route path='/quiz/orange' component={Orange} exact/>
+                        <Route path='/quiz/*' component={NotFound} exact/>
+                        <Route path='/loser' component={Loser} exact/>
                         <Route path='/login' component={Login} exact/>
                         <Route path='/statistics' component={Statistics} exact/>
+                        <Route component={NotFound}/>
                     </Switch>
                 </div>
             </BrowserRouter>

@@ -1,0 +1,21 @@
+.error{
+    img{
+        display:block;
+        margin:auto;
+        width:50%;
+        margin-top:50px;
+    }
+    .btn-back{
+        text-align:center;
+        width:20%;
+        cursor:pointer;
+        user-select:none;
+        margin:auto;
+        font-size:24px;
+        background-color:rgb(80,60,139);
+        font-weight:600;
+        border-radius:15px;
+        color:white;
+        padding:10px;
+    }
+}

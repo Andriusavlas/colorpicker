@@ -30,7 +30,7 @@ class Maroon extends React.Component{
             this.setState({level:this.state.level+1});
             this.renderSquares();
         }else{
-            this.props.history.push('/');
+            this.props.history.push('/loser');
         };
     };
     shuffleArray=(array)=>{
