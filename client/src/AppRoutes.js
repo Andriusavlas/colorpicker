@@ -5,6 +5,13 @@ import Level from './components/Level';
 import Home from './components/Home';
 import Statistics from './components/Statistics';
 import Login from './components/Login';
+import Red from './components/colors/Red';
+import Green from './components/colors/Green';
+import Maroon from './components/colors/Maroon';
+import Orange from './components/colors/Orange';
+import Purple from './components/colors/Purple';
+import Yellow from './components/colors/Yellow';
+import Blue from './components/colors/Blue';
 
 class AppRoutes extends React.Component{
     render(){
