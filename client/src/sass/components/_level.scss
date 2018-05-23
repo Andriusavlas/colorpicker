@@ -1,0 +1,80 @@
+.level{
+    margin-top:75px;
+    h1{
+        font-size:32px;
+        text-align:center;
+        margin-bottom:30px;
+    }
+    .squares{
+        max-width:500px;
+        margin:auto;
+        display:flex;
+        justify-content:space-between;
+        flex-wrap:wrap;
+        .square{
+            width:9.5%;
+            height:50px;
+            margin-bottom:5px;
+            user-select:none;
+            cursor:pointer;
+            border-spacing:border-box;
+        }
+        .clicked{
+            box-sizing:border-box;
+            border:3px solid black;
+        }
+    }
+    .btn-next, .btn-quit{
+        width:500px;
+        margin:auto;
+        user-select:none;
+        cursor:pointer;
+        text-align:center;
+        padding:10px;
+        margin-top:10px;
+        box-sizing:border-box;
+    }
+    .background{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100vh;
+        background:rgba(0,0,0,0.5);
+    }
+    .popup{
+        width:400px;
+        height:150px;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        background:white;
+        border-radius:5px;
+        display:flex;
+        justify-content:space-around;
+        flex-wrap:wrap;
+        align-items:center;
+        transition:0.7s;
+        h2{
+            width:100%;
+            font-size:24px;
+            text-align:center;
+        }
+        .btn-no, .btn-yes{
+            user-select:none;
+            cursor:pointer;
+            display:inline-block;
+            padding:10px 15px;
+            margin:20px;
+        }
+        .btn-no{
+            color:red;
+            border:1px solid red;
+        }
+        .btn-yes{
+            color:green;
+            border:1px solid green;
+        }
+    }
+}
