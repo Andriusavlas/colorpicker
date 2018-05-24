@@ -1,11 +1,12 @@
 .home{
     h1{
-        font-size:32px;
+        font-size:42px;
         text-align:center;
+        margin-top:25px;
         margin-bottom:50px;
     }
     .pallet{
-        max-width:800px;
+        max-width:1000px;
         margin:auto;
         display:flex;
         a{
@@ -29,5 +30,13 @@
     }
     .pallet-color-active{
         flex:5;
+    }
+    .first{
+        border-bottom-left-radius:30px;
+        border-top-left-radius:30px;
+    }
+    .last{
+        border-top-right-radius:30px;
+        border-bottom-right-radius:30px;
     }
 }

@@ -26,7 +26,13 @@ class Orange extends React.Component{
             };
             return total;
         },0);
-        if(score===5){
+        const clicks=this.state.squares.reduce((clicks, item)=>{
+            if(item[1]===true){
+                clicks+=1;
+            };
+            return clicks;
+        },0);
+        if(score===5 && clicks===5){
             this.setState({level:this.state.level+1});
             this.renderSquares();
         }else{
@@ -53,7 +59,7 @@ class Orange extends React.Component{
         // creates 60 falses in the local state
         const colors=[];
         const normal=`rgb(${color[0]},${color[1]},${color[2]})`;
-        const different=`rgb(${color[0]-100/this.state.level},${color[1]-50/this.state.level},${color[2]})`;
+        const different=`rgb(${color[0]},${color[1]-150/this.state.level},${color[2]})`;
         for(let x=0;x<55;x++){
             const variable=[normal,false];
             colors.push(variable);

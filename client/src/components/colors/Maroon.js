@@ -26,7 +26,13 @@ class Maroon extends React.Component{
             };
             return total;
         },0);
-        if(score===5){
+        const clicks=this.state.squares.reduce((clicks, item)=>{
+            if(item[1]===true){
+                clicks+=1;
+            };
+            return clicks;
+        },0);
+        if(score===5 && clicks===5){
             this.setState({level:this.state.level+1});
             this.renderSquares();
         }else{
