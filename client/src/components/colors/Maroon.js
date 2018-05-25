@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 class Maroon extends React.Component{
     state={
@@ -36,6 +37,7 @@ class Maroon extends React.Component{
             this.setState({level:this.state.level+1});
             this.renderSquares();
         }else{
+            this.props.scoreHandler('maroon',this.state.level);
             this.props.history.push('/loser');
         };
     };
@@ -112,4 +114,12 @@ class Maroon extends React.Component{
     };
 };
 
-export default Maroon;
+const mapDispatchToProps=(dispatch)=>{
+    return{
+        scoreHandler(color, level){
+            dispatch({type:"SCORE_HANDLER",payload:[color,level]})
+        }
+    };
+};
+
+export default connect(null,mapDispatchToProps)(Maroon);

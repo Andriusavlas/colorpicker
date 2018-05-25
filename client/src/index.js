@@ -9,8 +9,9 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
 
 import colorsReducer from './reducers/colorsReducer';
+import progressReducer from './reducers/progressReducer';
 
-const rootReducer=combineReducers({colors:colorsReducer});
+const rootReducer=combineReducers({colors:colorsReducer,progress:progressReducer});
 
 const store=createStore(rootReducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
